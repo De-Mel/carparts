@@ -1,6 +1,6 @@
 <?php
-$to = "as_saint@mail.ru";
-$from = trim($_POST['email']);
+// $to = "as_saint@mail.ru";
+// $from = trim($_POST['email']);
 
 $name = htmlspecialchars($_POST['name']);
 $name = urldecode($name);
@@ -30,14 +30,21 @@ $manners = htmlspecialchars($_POST['manners']);
 $manners = urldecode($manners);
 $manners = trim($manners);
 
-$headers = "From: $from" . "\r\n" .
-"Reply-To: $from" . "\r\n" .
-"X-Mailer: PHP/" . phpversion();
+// $headers = "From: $from" . "\r\n" .
+// "Reply-To: $from" . "\r\n" .
+// "X-Mailer: PHP/" . phpversion();
 
-if(mail($to, $manners, $headers)) {
-    echo 'Письмо отправлено';
+// if(mail($to, $manners, $headers)) {
+//     echo 'Письмо отправлено';
+// } else {
+//     echo 'Письмо не отправлено';
+// }
+
+if (mail("as_saint@mail.ru", "Заказ с сайта", "ФИО:".$name.". E-mail: ".$email ,"From: example2@mail.ru \r\n"))
+ {
+    echo "сообщение успешно отправлено";
 } else {
-    echo 'Письмо не отправлено';
+    echo "при отправке сообщения возникли ошибки";
 }
 
 ini_set('display_errors','On');
