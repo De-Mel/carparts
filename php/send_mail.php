@@ -39,4 +39,7 @@ if(mail($to, $manners, $headers)) {
 } else {
     echo 'Письмо не отправлено';
 }
+
+ini_set('display_errors','On');
+error_reporting('E_ALL');
 ?>
