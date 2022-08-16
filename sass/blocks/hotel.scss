@@ -1,0 +1,104 @@
+.hotel {
+  text-align: center;
+  position: relative;
+  z-index: 50;
+  background-color: $basic_black;
+  // margin-bottom: 49px;
+  padding: 33px 0 49px;
+
+  @media (min-width: $tablet-width) {
+    // margin-bottom: 58px;
+    padding: 58px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    // margin-bottom: 66px;
+    padding: 57px 0 66px;
+  }
+
+  &__title {
+    padding-bottom: 31px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      padding-bottom: 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+
+
+    }
+  }
+
+  &__text {
+    padding-bottom: 27px;
+
+    @media (min-width: $tablet-width) {
+      line-height: 24px;
+      padding-bottom: 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 45px;
+    }
+  }
+}
+
+.hotel__button[type="button"] {
+  font-weight: 700;
+  font-family: "PT Sans", "Arial", sans-serif;
+  line-height: 26px;
+  font-size: 21px;
+  background-color: $basic_red;
+  padding: 15px 0 18px;
+  width: 100%;
+  position: relative;
+  transition: color 0.5s ease;
+  z-index: 1;
+
+  &:hover {
+    // background-color: $basic_white;
+    color: $basic_red;
+    // z-index: -2;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    background-color: $basic_white;
+    color: $basic_red;
+    transition: transform 0.7s ease;
+    will-change: transform;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    // z-index: -2;
+    // transform-origin: left;
+    // transition: transform 0.5s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 15px 121px 18px;
+    max-width: 458px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 140px;
+  }
+}
