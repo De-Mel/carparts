@@ -84,6 +84,13 @@
   fill: $basic_red;
 }
 
+.icon__wa:hover path {
+  fill: $basic_red;
+}
+
+.icon__wa:hover rect {
+  fill: $basic_white;
+}
 // .contacts__social-link:active rect {
 //   fill: var(--special-blue-blue-dark);
 // }
