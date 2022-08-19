@@ -598,17 +598,17 @@ p {
       grid-column: inherit; } }
 
 @media (min-width: 768px) {
-  .info__icon-house {
+  .info__icon-marker {
     width: 75px;
     height: 72px; } }
 
 @media (min-width: 768px) {
-  .info__icon-food {
+  .info__icon-iphone {
     width: 75px;
     height: 70px; } }
 
 @media (min-width: 768px) {
-  .info__icon-souvenir {
+  .info__icon-email {
     width: 64px;
     height: 76px; } }
 
@@ -748,6 +748,8 @@ p {
 .work__item {
   display: grid;
   row-gap: 20px; }
+  .work__item svg {
+    margin: 0 auto; }
   .work__item:nth-child(2) {
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
@@ -1096,6 +1098,12 @@ p {
 
 .contacts__social-link:hover path {
   fill: #d73a31; }
+
+.icon__wa:hover path {
+  fill: #d73a31; }
+
+.icon__wa:hover rect {
+  fill: #ffffff; }
 
 .contacts__social-link:active path {
   fill: rgba(241, 37, 37, 0.3); }
